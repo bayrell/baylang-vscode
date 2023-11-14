@@ -1,25 +1,25 @@
 {
-  "name": "bay-lang",
-  "displayName": "Bay Lang",
-  "description": "",
-  "version": "0.12.0",
-  "engines": {
-    "vscode": "^1.70.0"
-  },
-  "categories": [
-    "Programming Languages"
-  ],
-  "contributes": {
-    "languages": [{
-      "id": "bay",
-      "aliases": ["Bay Lang", "bay"],
-      "extensions": ["bay"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "bay",
-      "scopeName": "",
-      "path": "./syntaxes/bay.tmLanguage.json"
-    }]
-  }
+	"name": "bay-lang",
+	"displayName": "Bay Lang",
+	"description": "",
+	"version": "0.12.0",
+	"engines": {
+		"vscode": "^1.70.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [{
+			"id": "bay",
+			"aliases": ["Bay Lang", "bay"],
+			"extensions": ["bay"],
+			"configuration": "./language-configuration.json"
+		}],
+		"grammars": [{
+			"language": "bay",
+			"scopeName": "source.bay",
+			"path": "./syntaxes/bay.tmLanguage.json"
+		}]
+	}
 }
