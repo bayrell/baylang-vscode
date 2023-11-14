@@ -5,6 +5,7 @@
 	"patterns": [
 		{ "include": "#comment_block" },
 		{ "include": "#keywords" },
+		{ "include": "#strings" },
 		{ "include": "#style_block" },
 		{ "include": "#template_block" }
 	],
@@ -27,16 +28,27 @@
 		"template_block": {
 			"begin": "<template[^>]*>",
 			"end": "</template>",
-			"name": "text.html.basic",
+			"name": "text.xml",
 			"patterns": [
 				{
-					"include": "text.html.basic"
+					"include": "text.xml"
 				}
 			]
 		},
 		"keywords": {
-			"name": "keyword.control.bay",
+			"name": "keyword.other.bay",
 			"match": "\\b(abstract|and|as|assignable|async|attr|await|bool|catch|class|classof|classref|clone|cloneable|const|continue|curry|declare|default|double|else|extends|false|float|fn|for|fun|html|if|implements|implementsof|instanceof|int|interface|lambda|list|macros|memorize|method|monad|namespace|new|not|of|or|pipe|primitive|protected|public|published|pure|return|safe|serializable|static|string|struct|throw|true|try|type|use|var|void|while)\\b"
+		},
+		"strings": {
+			"name": "string.quoted.double.bay",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.bay",
+					"match": "\\\\."
+				}
+			]
 		}
 	}
 }
