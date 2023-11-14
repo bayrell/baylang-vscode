@@ -51,10 +51,13 @@ published
 pure
 return
 safe
+script
 serializable
 static
 string
 struct
+style
+template
 throw
 true
 try

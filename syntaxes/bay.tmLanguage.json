@@ -37,7 +37,7 @@
 		},
 		"keywords": {
 			"name": "keyword.other.bay",
-			"match": "\\b(abstract|and|as|assignable|async|attr|await|bool|catch|class|classof|classref|clone|cloneable|const|continue|curry|declare|default|double|else|extends|false|float|fn|for|fun|html|if|implements|implementsof|instanceof|int|interface|lambda|list|macros|memorize|method|monad|namespace|new|not|of|or|pipe|primitive|protected|public|published|pure|return|safe|serializable|static|string|struct|throw|true|try|type|use|var|void|while)\\b"
+			"match": "\\b(abstract|and|as|assignable|async|attr|await|bool|catch|class|classof|classref|clone|cloneable|const|continue|curry|declare|default|double|else|extends|false|float|fn|for|fun|html|if|implements|implementsof|instanceof|int|interface|lambda|list|macros|memorize|method|monad|namespace|new|not|of|or|pipe|primitive|protected|public|published|pure|return|safe|script|serializable|static|string|struct|style|template|throw|true|try|type|use|var|void|while)\\b"
 		},
 		"strings": {
 			"name": "string.quoted.double.bay",
