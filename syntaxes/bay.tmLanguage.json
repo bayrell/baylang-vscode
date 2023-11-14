@@ -3,30 +3,40 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Bay Lang",
 	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
+		{ "include": "#comment_block" },
+		{ "include": "#keywords" },
+		{ "include": "#style_block" },
+		{ "include": "#template_block" }
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.bay",
-				"match": "\\b(namespace|struct|if|while|return)\\b"
-			}]
+		"comment_block": {
+			"name": "comment.block.bay",
+			"begin": "/\\*",
+			"end": "\\*/"
 		},
-		"strings": {
-			"name": "string.quoted.double.bay",
-			"begin": "\"",
-			"end": "\"",
+		"style_block": {
+			"begin": "<style[^>]*>",
+			"end": "</style>",
+			"name": "source.css",
 			"patterns": [
 				{
-					"name": "constant.character.escape.bay",
-					"match": "\\\\."
+					"include": "source.css"
 				}
 			]
+		},
+		"template_block": {
+			"begin": "<template[^>]*>",
+			"end": "</template>",
+			"name": "text.html.basic",
+			"patterns": [
+				{
+					"include": "text.html.basic"
+				}
+			]
+		},
+		"keywords": {
+			"name": "keyword.control.bay",
+			"match": "\\b(abstract|and|as|assignable|async|attr|await|bool|catch|class|classof|classref|clone|cloneable|const|continue|curry|declare|default|double|else|extends|false|float|fn|for|fun|html|if|implements|implementsof|instanceof|int|interface|lambda|list|macros|memorize|method|monad|namespace|new|not|of|or|pipe|primitive|protected|public|published|pure|return|safe|serializable|static|string|struct|throw|true|try|type|use|var|void|while)\\b"
 		}
 	}
 }

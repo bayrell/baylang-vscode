@@ -2,7 +2,12 @@
 	"name": "bay-lang",
 	"displayName": "Bay Lang",
 	"description": "",
+	"publisher": "Bayrell",
 	"version": "0.12.0",
+	"main": "index.js",
+	"activationEvents": [
+		"onLanguage:bay"
+	],
 	"engines": {
 		"vscode": "^1.70.0"
 	},

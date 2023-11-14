@@ -1,20 +1,6 @@
-/*
 const fs = require("fs");
+const path = require("path");
+const vscode = require("vscode");
 
-function readKeywords()
-{
-	let content = fs.readFileSync("keywords.txt", 'utf-8');
-	let arr = content
-		.split("\n")
-		.filter( (s) => { return s != "" } )
-	;
-	return arr;
-}
-
-vscode.languages.registerCompletionItemProvider('bay', {
-	provideCompletionItems() {
-		let keywords = readKeywords();
-		keywords = keywords.map(item => new vscode.CompletionItem(item));
-		return keywords;
-	}
-});*/
+const extension = vscode.extensions.getExtension("Bayrell.bay-lang");
+const extension_dir_path = extension.extensionUri.path;
