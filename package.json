@@ -1,10 +1,17 @@
 {
 	"name": "bay-lang",
 	"displayName": "Bay Lang",
-	"description": "",
+	"description": "Bay Lang VSCode extension",
 	"publisher": "Bayrell",
 	"version": "0.1.0",
 	"main": "index.js",
+	"author": "Ildar Bikmamatov <ildar@bayrell.org>",
+	"license": "Apache-2.0",
+	"homepage": "https://github.com/bayrell/web-lang",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bayrell/bay-lang-vscode"
+	},
 	"activationEvents": [
 		"onLanguage:bay"
 	],
