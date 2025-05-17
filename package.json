@@ -13,6 +13,10 @@
 		"type": "git",
 		"url": "https://github.com/bayrell/baylang-vscode"
 	},
+	"scripts": {
+		"vsce": "./node_modules/.bin/vsce",
+		"install": "install_vsix bay-lang 0.1.1 ./bay-lang-0.1.1.vsix"
+	},
 	"activationEvents": [
 		"onLanguage:bay"
 	],
@@ -23,15 +27,28 @@
 		"Programming Languages"
 	],
 	"contributes": {
-		"languages": [{
-			"id": "bay",
-			"aliases": ["BayLang", "Bay Lang", "bay"],
-			"extensions": ["bay"]
-		}],
-		"grammars": [{
-			"language": "bay",
-			"scopeName": "source.bay",
-			"path": "./syntaxes/bay.tmLanguage.json"
-		}]
+		"languages": [
+			{
+				"id": "bay",
+				"aliases": [
+					"BayLang",
+					"Bay Lang",
+					"bay"
+				],
+				"extensions": [
+					"bay"
+				]
+			}
+		],
+		"grammars": [
+			{
+				"language": "bay",
+				"scopeName": "source.bay",
+				"path": "./syntaxes/bay.tmLanguage.json"
+			}
+		]
+	},
+	"devDependencies": {
+		"@vscode/vsce": "^3.4.0"
 	}
 }
